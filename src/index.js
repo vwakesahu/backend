@@ -1,12 +1,18 @@
-import mongoose from 'mongoose'
-import { DB_NAME } from './constants'
+import connectDb from "./db/index.js";
+import dotenv from "dotenv";
+dotenv.config({
+  path: "./env",
+});
+connectDb();
 
-
-
- //Effi Method
+//Effi Method
+/*
  import express from 'express'
 
- const app = express()
+ const app = express();
+
+
+
  ;( async () ={
     try{
 
@@ -23,4 +29,4 @@ import { DB_NAME } from './constants'
         console.log("Error: ", error);
         throw error
     } 
- })( )
+ })( ) */
